@@ -1,8 +1,9 @@
 import aiomysql
+from data.config import MY_BOT,ip
 
 async def connection():
-    conn = await aiomysql.connect(host=localhost, port=3306,
-                                  user='root', password='', db='mysql')
+    conn = await aiomysql.connect(host=ip, port=3306,
+                                  user='root', password='jshd6d', db=MY_BOT)
     conn.close()
    
 async def user_info(chat_id):
